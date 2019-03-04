@@ -1,0 +1,35 @@
+{
+  "name": "drawimageinstagram",
+  "version": "1.0.0",
+  "description": "Draw data image from url friend public on your instagram",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev" : "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoc-anms/Draw-Image-Instagram.git"
+  },
+  "keywords": [
+    "draw",
+    "data",
+    "instagram",
+    "social",
+    "network"
+  ],
+  "author": "hoc-anms",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoc-anms/Draw-Image-Instagram/issues"
+  },
+  "homepage": "https://github.com/hoc-anms/Draw-Image-Instagram#readme",
+  "devDependencies": {
+    "fs": "0.0.1-security",
+    "image-downloader": "^3.4.2",
+    "puppeteer": "^1.12.2"
+  },
+  "dependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
