@@ -15,13 +15,31 @@ async function main() {
     fs.mkdirSync(config.FOLDER)
   }
 
+  // create folder if it not exist
+  if (!fs.existsSync(config.FOLDER_QUOTE)) {
+    fs.mkdirSync(config.FOLDER_QUOTE)
+  }
+
   // Get image attribute
   const imageSrcSets = await page.evaluate( () => {
     const imgs = Array.from(document.querySelectorAll('article img'))
     const srcSetAttribute = imgs.map( i => i.getAttribute('srcset'))
     return srcSetAttribute
   })
+  await page.goto(config.URL_QUOTE)
+
+  const quote = await page.evaluate( () => {
+    const img = document.querySelectorAll('.oncl_q img')[0].src;
+
+    return img;
+  })
+
   await browser.close()
+
+  downloader({
+    url: quote,
+    dest: config.FOLDER_QUOTE
+  })
 
   // process and download iamge
   for (let i = 0; i < imageSrcSets.length; i++) {
