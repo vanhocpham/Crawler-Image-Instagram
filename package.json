@@ -27,7 +27,7 @@
   "devDependencies": {
     "fs": "0.0.1-security",
     "image-downloader": "^3.4.2",
-    "puppeteer": "^1.12.2"
+    "puppeteer": "^1.13.0"
   },
   "dependencies": {
     "nodemon": "^1.18.10"
